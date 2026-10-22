@@ -1,0 +1,40 @@
+{
+  "site": {
+    "title": "당근 중국어 스터디",
+    "tagline": "왕초보부터 함께하는 목요일 저녁 중국어",
+    "channel": "Learn Chinese with Pipo",
+    "source": "Learn Chinese with Pipo (YouTube)",
+    "sourceUrl": "https://www.youtube.com/channel/UCtncu9Jg74Iqxea_FSuSVRg"
+  },
+  "defaults": {
+    "day": "매주 목요일",
+    "time": "저녁",
+    "place": "장소 추후 공지",
+    "mapUrl": "",
+    "bring": "함께 즐겁게 공부하고 싶은 마음가짐",
+    "switchHour": 23
+  },
+  "meetings": [
+    {
+      "date": "2026-10-29",
+      "label": "1주차",
+      "level": "HSK 1",
+      "emoji": "👋",
+      "title": "인사하기 · 10가지 장면",
+      "es": "你好！早上好！",
+      "time": "저녁 (시간 추후 공지)",
+      "duration": "15:08",
+      "youtube": "T3E9ANKg88I",
+      "pdf": "workbook.pdf",
+      "workbookHtml": "workbook.html",
+      "topics": [
+        "아침·오후·저녁 인사 (早上好 · 下午好 · 晚安)",
+        "처음 만났을 때 (很高兴认识你 · 请多关照)",
+        "안부 묻기 (你最近好吗？ · 你吃饭了吗？)",
+        "선생님·어른께 인사 (老师好 · 阿姨好 · 您)",
+        "헤어질 때 (再见 · 回头见 · 明天见 · 路上小心)"
+      ],
+      "notice": "첫 모임이에요! 10가지 장면의 짧은 인사 대화로 중국어 인사를 익혀요. 모임 전에 '듣기'에서 대화 1~2개만이라도 들어 보고, 마음에 드는 문장 하나를 외워 오세요. 모임에서 짝과 함께 역할을 나눠 읽어 볼게요!"
+    }
+  ]
+}

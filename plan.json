@@ -1,0 +1,361 @@
+{
+ "title": "중국어 HSK 1~2 대화 학습 순서",
+ "source": "Learn Chinese with Pipo · Chinese Conversations HSK 1-2 (46편)",
+ "playlist": "https://www.youtube.com/playlist?list=PL8CQbq1E20CXMvPI5xL6P77L59vjLsQnK",
+ "start": "2026-10-29",
+ "note": "매주 목요일 한 편씩 이 순서대로 함께 공부해요. 영상 하나에 짧은 대화가 여러 개 들어 있어요. 모임 날짜는 사정에 따라 바뀔 수 있어요.",
+ "stages": [
+  {
+   "title": "1단계 · 인사와 자기소개",
+   "weeks": [
+    {
+     "week": 1,
+     "youtube": "T3E9ANKg88I",
+     "emoji": "👋",
+     "title": "인사하기",
+     "duration": "15:08"
+    },
+    {
+     "week": 2,
+     "youtube": "IkMpnixoiNI",
+     "emoji": "🙋",
+     "title": "자기소개",
+     "duration": "16:34"
+    },
+    {
+     "week": 3,
+     "youtube": "W3HSnXRgoS0",
+     "emoji": "💬",
+     "title": "짧은 생활 대화 10개 ①",
+     "duration": "14:16"
+    },
+    {
+     "week": 4,
+     "youtube": "36wqXkdXL5k",
+     "emoji": "💬",
+     "title": "짧은 생활 대화 10개 ②",
+     "duration": "15:24"
+    },
+    {
+     "week": 5,
+     "youtube": "g3RnXf-aleI",
+     "emoji": "👨‍👩‍👧",
+     "title": "가족 이야기",
+     "duration": "14:35"
+    },
+    {
+     "week": 6,
+     "youtube": "-z6oa05FAII",
+     "emoji": "💼",
+     "title": "직업 소개",
+     "duration": "18:30"
+    },
+    {
+     "week": 7,
+     "youtube": "P2XRipIInVw",
+     "emoji": "❤️",
+     "title": "좋아하는 것과 싫어하는 것",
+     "duration": "27:20"
+    },
+    {
+     "week": 8,
+     "youtube": "FadTdqLwxDc",
+     "emoji": "🎨",
+     "title": "취미와 여가",
+     "duration": "26:17"
+    }
+   ]
+  },
+  {
+   "title": "2단계 · 일상 생활",
+   "weeks": [
+    {
+     "week": 9,
+     "youtube": "wXMWRJ7ppyI",
+     "emoji": "🏠",
+     "title": "집과 가족",
+     "duration": "30:27"
+    },
+    {
+     "week": 10,
+     "youtube": "u5IxvI_vLgM",
+     "emoji": "🌅",
+     "title": "중국의 일상",
+     "duration": "22:09"
+    },
+    {
+     "week": 11,
+     "youtube": "eKyE5UeYUuA",
+     "emoji": "📅",
+     "title": "주말 계획 세우기",
+     "duration": "22:18"
+    },
+    {
+     "week": 12,
+     "youtube": "QclIREx8qUA",
+     "emoji": "☕",
+     "title": "자유 시간 이야기",
+     "duration": "26:26"
+    },
+    {
+     "week": 13,
+     "youtube": "QITnKgS9MNQ",
+     "emoji": "🗣️",
+     "title": "일상 중국어 대화",
+     "duration": "20:04"
+    },
+    {
+     "week": 14,
+     "youtube": "UV9E3Lsfc2A",
+     "emoji": "📝",
+     "title": "HSK 1~2 대화 연습",
+     "duration": "24:10"
+    },
+    {
+     "week": 15,
+     "youtube": "-zUVfVm2wwI",
+     "emoji": "📚",
+     "title": "중국어 공부 이야기",
+     "duration": "36:42"
+    }
+   ]
+  },
+  {
+   "title": "3단계 · 음식과 쇼핑",
+   "weeks": [
+    {
+     "week": 16,
+     "youtube": "4_46L3ZUmjo",
+     "emoji": "🧋",
+     "title": "음료·간식 사기",
+     "duration": "37:07"
+    },
+    {
+     "week": 17,
+     "youtube": "6f3R7mgdJIU",
+     "emoji": "🍜",
+     "title": "음식 주문하기",
+     "duration": "28:36"
+    },
+    {
+     "week": 18,
+     "youtube": "-GTN-PDATKI",
+     "emoji": "🥟",
+     "title": "길거리 음식",
+     "duration": "34:26"
+    },
+    {
+     "week": 19,
+     "youtube": "lwWR07b1WpE",
+     "emoji": "🛒",
+     "title": "장보기",
+     "duration": "23:01"
+    },
+    {
+     "week": 20,
+     "youtube": "Fym3l08fNMU",
+     "emoji": "🛍️",
+     "title": "쇼핑과 서비스",
+     "duration": "28:30"
+    },
+    {
+     "week": 21,
+     "youtube": "z8fYuFH9Y7k",
+     "emoji": "💳",
+     "title": "쇼핑으로 배우는 중국어",
+     "duration": "34:25"
+    },
+    {
+     "week": 22,
+     "youtube": "u4cFciRIXKA",
+     "emoji": "🍔",
+     "title": "서양 음식 이야기 (HSK 2)",
+     "duration": "36:06"
+    }
+   ]
+  },
+  {
+   "title": "4단계 · 길과 교통",
+   "weeks": [
+    {
+     "week": 23,
+     "youtube": "YugTEoyWtoU",
+     "emoji": "🧭",
+     "title": "길 묻기",
+     "duration": "26:21"
+    },
+    {
+     "week": 24,
+     "youtube": "_vrYDiHoqyY",
+     "emoji": "🚶",
+     "title": "길 위에서",
+     "duration": "16:53"
+    },
+    {
+     "week": 25,
+     "youtube": "1Pg1xwRyl7U",
+     "emoji": "🚌",
+     "title": "버스 타기",
+     "duration": "20:33"
+    },
+    {
+     "week": 26,
+     "youtube": "IEFPcSfGL7Q",
+     "emoji": "🚇",
+     "title": "대중교통",
+     "duration": "30:28"
+    },
+    {
+     "week": 27,
+     "youtube": "FRKZf6VvwJE",
+     "emoji": "🎫",
+     "title": "교통 티켓",
+     "duration": "약 20분"
+    },
+    {
+     "week": 28,
+     "youtube": "TJNw_u9Snic",
+     "emoji": "🚕",
+     "title": "택시 타기",
+     "duration": "27:15"
+    },
+    {
+     "week": 29,
+     "youtube": "Q3A8SnsCU5o",
+     "emoji": "🧳",
+     "title": "여행 대화 15개",
+     "duration": "30:28"
+    }
+   ]
+  },
+  {
+   "title": "5단계 · 실전 상황",
+   "weeks": [
+    {
+     "week": 30,
+     "youtube": "Sk6UCH9yxpI",
+     "emoji": "🍽️",
+     "title": "음식·서비스 주문",
+     "duration": "32:29"
+    },
+    {
+     "week": 31,
+     "youtube": "hZM05y1AUBQ",
+     "emoji": "🆘",
+     "title": "도움 요청하기",
+     "duration": "30:41"
+    },
+    {
+     "week": 32,
+     "youtube": "hZ8-gPv5OBk",
+     "emoji": "🏨",
+     "title": "중국에서 살아남기: 호텔·택시·지하철",
+     "duration": "30:25"
+    },
+    {
+     "week": 33,
+     "youtube": "RDgEsCDtEiY",
+     "emoji": "✈️",
+     "title": "공항에서 야시장까지",
+     "duration": "24:48"
+    },
+    {
+     "week": 34,
+     "youtube": "Khb_4WyGncU",
+     "emoji": "😤",
+     "title": "식당에서 항의하기",
+     "duration": "24:28"
+    },
+    {
+     "week": 35,
+     "youtube": "-IqdfPZpQvo",
+     "emoji": "⚡",
+     "title": "갈등과 다툼",
+     "duration": "27:21"
+    },
+    {
+     "week": 36,
+     "youtube": "3FwnU94RnUM",
+     "emoji": "🏙️",
+     "title": "중국의 실제 일상",
+     "duration": "31:33"
+    },
+    {
+     "week": 37,
+     "youtube": "z9DY9l2dDzY",
+     "emoji": "💬",
+     "title": "일상 대화 8개",
+     "duration": "27:17"
+    }
+   ]
+  },
+  {
+   "title": "6단계 · 생각과 사회생활, 마무리",
+   "weeks": [
+    {
+     "week": 38,
+     "youtube": "S0FStImyJDo",
+     "emoji": "💞",
+     "title": "가족·사랑·관계",
+     "duration": "31:23"
+    },
+    {
+     "week": 39,
+     "youtube": "NGmDkgicL3E",
+     "emoji": "✏️",
+     "title": "시험 이야기",
+     "duration": "30:11"
+    },
+    {
+     "week": 40,
+     "youtube": "DSfsrUTHReE",
+     "emoji": "🏢",
+     "title": "사무실에서",
+     "duration": "17:08"
+    },
+    {
+     "week": 41,
+     "youtube": "N4YCnUN6_ew",
+     "emoji": "🤝",
+     "title": "면접",
+     "duration": "17:42"
+    },
+    {
+     "week": 42,
+     "youtube": "4VqXfkbJTXI",
+     "emoji": "🌾",
+     "title": "도시 vs 시골 (HSK 2)",
+     "duration": "43:07"
+    },
+    {
+     "week": 43,
+     "youtube": "LoO_4wu3SCo",
+     "emoji": "🏮",
+     "title": "중국 문화 대화",
+     "duration": "28:42"
+    },
+    {
+     "week": 44,
+     "youtube": "bJ8kpLwP6BM",
+     "emoji": "🎯",
+     "title": "취미 묻기",
+     "duration": "43:30"
+    },
+    {
+     "week": 45,
+     "youtube": "lSgfJEh6JWw",
+     "emoji": "💬",
+     "title": "실생활 대화 12개",
+     "duration": "29:58"
+    },
+    {
+     "week": 46,
+     "youtube": "cbdagnzfu6k",
+     "emoji": "⚽",
+     "title": "월드컵 대화",
+     "duration": "59:15"
+    }
+   ]
+  }
+ ]
+}
