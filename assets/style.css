@@ -141,6 +141,13 @@ body.undone .vrow.done{display:none}
 .line.V .es{font-size:22px}
 .py{color:var(--red);font-size:14.5px;margin-top:1px;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif}
 body.nopy .py{display:none}
+.rb ruby{ruby-position:over;margin:0 1px}
+.rb rt{color:var(--red);font-size:12.5px;font-weight:500;letter-spacing:0;line-height:1.2;padding:0 2px;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif}
+.line .es.rb{line-height:2.3;padding-top:2px}
+.vrow .w .rb{line-height:2.2;white-space:nowrap}
+.vrow .w .rb rt{font-size:12px}
+body.nopy .line .rb rt{display:none}
+body.nopy .line .es.rb{line-height:1.45;padding-top:0}
 .vrow .w{display:flex;flex-direction:column}
 .vrow .w [lang]{font-size:18px}
 .vpy{font-weight:500;color:var(--red);font-size:13px}

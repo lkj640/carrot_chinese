@@ -1,5 +1,5 @@
 (async () => {
-  const { lab, esc, fmtDate, store, load } = CS;
+  const { lab, esc, ruby, fmtDate, store, load } = CS;
   const $ = id => document.getElementById(id);
   const fmt = t => { t = Math.max(0, t | 0); return (t / 60 | 0) + ":" + String(t % 60).padStart(2, "0"); };
 
@@ -39,6 +39,12 @@
 
   // ---------- 대본 ----------
   const data = await fetch(base + "data.json").then(r => r.json());
+  // 병음이 글자마다 맞으면 한자 위에, 아니면 예전처럼 한자 아래 한 줄로 보여 줘요.
+  const zhpy = (zh, py, cls) => {
+    const r = py && ruby(zh, py);
+    return r ? `<div class="${cls} rb" lang="zh-CN" data-zh="${esc(zh)}">${r}</div>`
+      : `<div class="${cls}" lang="zh-CN" data-zh="${esc(zh)}">${esc(zh)}</div>${py ? `<div class="py">${esc(py)}</div>` : ""}`;
+  };
   const who = Object.assign({ A: "A", B: "B", N: "📢", V: "단어" }, data.speakers);
   let html = "", opts = '<option value="">📍 구간으로 이동…</option>', n = 0;
   data.sections.forEach((s, si) => {
@@ -46,7 +52,7 @@
     opts += `<option value="${si}">${esc(s.title)}</option>`;
     for (const l of s.lines) {
       html += `<div class="line ${l.s}" data-i="${n++}" data-t="${l.t}"><div class="who">${esc((s.who && s.who[l.s]) || who[l.s] || l.s)}<span class="ts">${fmt(l.t)}</span></div>
-        <div class="txt"><div class="es" lang="zh-CN">${esc(l.es)}</div>${l.py ? `<div class="py">${esc(l.py)}</div>` : ""}<div class="ko">${esc(l.ko)}</div></div></div>`;
+        <div class="txt">${zhpy(l.es, l.py, "es")}<div class="ko">${esc(l.ko)}</div></div></div>`;
     }
   });
   $("lines").innerHTML = html;
@@ -139,7 +145,7 @@
     cur = i;
     if (i < 0) return;
     const l = lines[i]; l.classList.add("active");
-    $("now").textContent = l.querySelector(".who").firstChild.textContent + ": " + l.querySelector(".es").textContent;
+    $("now").textContent = l.querySelector(".who").firstChild.textContent + ": " + l.querySelector(".es").dataset.zh;
     if ($("optScroll").checked && !E.paused() && $("pane-listen").classList.contains("on")) {
       const r = l.getBoundingClientRect(), barH = document.querySelector(".bar").offsetHeight;
       if (r.top < 120 || r.bottom > innerHeight - barH - 20) l.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -224,7 +230,7 @@
       const [w, py, mean] = r.length > 2 ? r : [r[0], "", r[1]];
       const id = gi + "-" + ri;
       vh += `<label class="vrow${known.has(id) ? " done" : ""}" data-id="${id}"><input type="checkbox"${known.has(id) ? " checked" : ""} aria-label="외웠어요">
-        <span class="w"><span lang="zh-CN">${esc(w)}</span>${py ? `<small class="vpy">${esc(py)}</small>` : ""}</span><span class="m">${esc(mean)}</span></label>`;
+        <span class="w">${(py && ruby(w, py)) ? `<span class="rb" lang="zh-CN">${ruby(w, py)}</span>` : `<span lang="zh-CN">${esc(w)}</span>${py ? `<small class="vpy">${esc(py)}</small>` : ""}`}</span><span class="m">${esc(mean)}</span></label>`;
     });
     vh += "</div>";
   });

@@ -23,6 +23,35 @@ const CS = (() => {
     if (j.defaults && j.defaults.switchHour != null) switchHour = j.defaults.switchHour;
     return j;
   }
+  // 병음을 한자 한 글자마다 하나씩 위에 얹어요(<ruby>). 글자 수와 음절 수가 안 맞으면 null.
+  const SYL = /^(?:er|(?:zh|ch|sh|[bpmfdtnlgkhjqxrzcsyw])?(?:iang|iong|uang|ueng|iao|ian|ing|uai|uan|ang|eng|ong|van|ai|ei|ao|ou|an|en|ia|ie|iu|in|ua|uo|ui|un|ue|ve|vn|a|o|e|i|u|v))$/;
+  const base = c => c.normalize("NFD").replace(/u\u0308/i, "v")[0].toLowerCase();
+  const toned = c => /[\u0300\u0301\u0304\u030c]/.test(c.normalize("NFD"));
+  function sylls(w) {
+    const ch = [...w.normalize("NFC")], b = ch.map(base).join(""), out = [];
+    const go = i => {
+      if (i === b.length) return true;
+      for (let n = Math.min(6, b.length - i); n > 0; n--) {
+        const s = b.slice(i, i + n);
+        // 단어 중간 음절은 자음으로 시작(아니면 병음에 ' 가 붙어요), 끝의 r은 儿화
+        const ok = (i > 0 && s === "r" && i + n === b.length) || (SYL.test(s) && (i === 0 || !/^[aoeiuv]/.test(s)));
+        if (!ok || ch.slice(i, i + n).filter(toned).length > 1) continue;
+        out.push(ch.slice(i, i + n).join(""));
+        if (go(i + n)) return true;
+        out.pop();
+      }
+      return false;
+    };
+    return go(0) ? out : null;
+  }
+  function ruby(zh, py) {
+    const words = String(py || "").match(/[a-zA-Z\u00c0-\u024f\u0300-\u036f]+/g) || [], ps = [];
+    for (const w of words) { const s = sylls(w); if (!s) return null; ps.push(...s); }
+    const chars = [...String(zh || "")];
+    if (!ps.length || chars.filter(c => /\p{Script=Han}/u.test(c)).length !== ps.length) return null;
+    let k = 0;
+    return chars.map(c => /\p{Script=Han}/u.test(c) ? `<ruby>${esc(c)}<rt>${esc(ps[k++])}</rt></ruby>` : esc(c)).join("");
+  }
   const lab = m => m.label || (m.ep != null ? `Ep.${m.ep}` : "");
-  return { lab, esc, todayKST, fmtDate, daysBetween, isUpcoming, store, load };
+  return { lab, esc, ruby, todayKST, fmtDate, daysBetween, isUpcoming, store, load };
 })();
