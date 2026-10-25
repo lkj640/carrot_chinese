@@ -6,6 +6,8 @@ work, out = sys.argv[1:3]
 sys.path.insert(0, work)
 from lines import L
 from vocab import VOCAB
+sys.path.insert(0, f"{work}/..")
+from ruby import zp
 
 e = lambda s: html.escape(s, quote=False)
 fmt = lambda t: f"{int(t)//60}:{int(t)%60:02d}"
@@ -30,7 +32,7 @@ def dialog(i):
         if s not in "AB":
             continue
         rows.append(f'<div class="dl"><div class="dw {s}">{e(d["who"][s])}<span>{fmt(t)}</span></div>'
-                    f'<div><b class="zh" lang="zh-CN">{e(z)}</b><i class="py">{e(py)}</i></div><small class="dk">{e(ko)}</small></div>')
+                    f'<div>{zp(z, py, "b")}</div><small class="dk">{e(ko)}</small></div>')
     scene = d["lines"][0]
     return (f'<h3 class="scene"><span class="sn">대화 {i+1}</span> {zh(scene[2])} <span class="sk">{e(scene[4])} · {fmt(scene[1])}</span></h3>'
             '<div class="dlg">' + "".join(rows) + "</div>")
@@ -39,9 +41,9 @@ def words(i, j):
     # 대화마다 표 하나씩, 두 표를 나란히 (이번 주는 대화가 길어서 자리를 아껴요)
     out = []
     for k in (i, j):
-        tr = "".join(f'<tr><td class="wz">{zh(z)}</td><td class="wp">{e(py)}</td><td>{e(ko)}</td></tr>'
+        tr = "".join(f'<tr><td class="wz">{zp(z, py)}</td><td>{e(ko)}</td></tr>'
                      for s, t, z, py, ko in D[k]["lines"] if s == "V")
-        out.append(f'<table class="t words" style="flex:1"><tr><th colspan="3">대화 {k+1}</th></tr>' + tr + "</table>")
+        out.append(f'<table class="t words" style="flex:1"><tr><th colspan="2">대화 {k+1}</th></tr>' + tr + "</table>")
     return '<div class="two">' + "".join(out) + "</div>"
 
 def h(tag, title): return f'<h2><span class="tag">{tag}</span>{title}</h2>'
@@ -247,8 +249,8 @@ P.append(f'''<section class="lesson"><div class="hd"><div class="k">附录 A</di
 
 voc = ['<section class="lesson"><div class="hd"><div class="k">附录 C</div><h1>단어장</h1><div class="s">사이트의 \'단어장\'과 같은 내용이에요. 외운 단어는 □에 체크하세요.</div></div><div class="vcols">']
 for title, rows in VOCAB:
-    voc.append(f'<table class="t v"><tr><th colspan="3">{e(title)}</th></tr>' + "".join(
-        f'<tr><td><span class="cb"></span>{zh(z)}</td><td class="wp">{e(py)}</td><td>{e(ko)}</td></tr>' for z, py, ko in rows) + "</table>")
+    voc.append(f'<table class="t v"><tr><th colspan="2">{e(title)}</th></tr>' + "".join(
+        f'<tr><td><span class="cb"></span>{zp(z, py)}</td><td>{e(ko)}</td></tr>' for z, py, ko in rows) + "</table>")
 voc.append("</div></section>")
 P.append("".join(voc))
 

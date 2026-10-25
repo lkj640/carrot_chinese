@@ -28,4 +28,5 @@
    (`"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer --print-to-pdf=meetings/<날짜>/workbook.pdf file://…/workbook.html`)
 5. `meetings.json`에 항목 추가 → `git add . && git commit -m "…" && git push`
 
+병음은 한자 한 글자마다 위에 얹어 보여 줘요(사이트 `assets/common.js`의 `ruby()`, 교재 `tools/ruby.py`). 그러려면 병음 음절 수가 한자 수와 같아야 하고, 안 맞는 문장은 예전처럼 한자 아래 한 줄로 나와요. 儿화는 zhèr처럼 붙여 써도 돼요.
 병음은 不·一의 바뀐 성조를 그대로 적고(bú kèqi, yíhuìr), 3성+3성은 원래 성조로 적어요.
